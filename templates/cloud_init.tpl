@@ -12,6 +12,7 @@ packages:
   - qemu-guest-agent
   - git
   - wget
+  - maven
 # Run commands at boot (only first time)
 runcmd:
   - mkdir /usr/lib/jvm
@@ -21,5 +22,5 @@ runcmd:
   - rm graalvm-*.tar.gz
   - mv graalvm-*/ graalvm/
   - echo 'export PATH=$PATH:/usr/lib/jvm/graalvm/bin' >> /home/${user}/.bashrc
-  - echo 'export JAVA_HOME=$PATH:/usr/lib/jvm/graalvm' >> /home/${user}/.bashrc
+  - echo 'export JAVA_HOME=/usr/lib/jvm/graalvm' >> /home/${user}/.bashrc
   - /usr/lib/jvm/graalvm/lib/installer/bin/gu install native-image
