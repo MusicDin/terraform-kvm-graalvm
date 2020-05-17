@@ -13,6 +13,8 @@ packages:
   - git
   - wget
   - maven
+  - gcc
+  - libz.a
 # Run commands at boot (only first time)
 runcmd:
   - mkdir /usr/lib/jvm
